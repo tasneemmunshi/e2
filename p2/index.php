@@ -1,3 +1,5 @@
+<?php require 'index-controller.php'; ?>
+
 <!doctype html>
 <html lang='en'>
 <head>
@@ -6,5 +8,10 @@
 </head>
 <body>
 	<h1>P2 Application</h1>
+	
+	<p>
+		Your magic number is <?php echo $magicNumber; ?>... did you guess correct?
+	</p>
+
 </body>
 </html>

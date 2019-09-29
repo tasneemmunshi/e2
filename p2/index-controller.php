@@ -1,10 +1,14 @@
-<!doctype html>
-<html lang='en'>
-<head>
-	<title>P2 Application</title>
-	<meta charset='utf-8'>
-</head>
-<body>
-	<h1>P2 Application</h1>
-</body>
-</html>
+<?php
+
+# Guess the magic number from 1 to 10!
+
+$number = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
+
+$randomNumber = rand(0, 9);
+
+//var_dump($number[$randomNumber]);
+
+$magicNumber = ($number[$randomNumber]);
+
+echo $magicNumber;
+
