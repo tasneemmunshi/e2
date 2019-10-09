@@ -12,4 +12,4 @@
 n/a
 
 ## Notes for instructor
-n/a
+Answer is: ice scream
