@@ -6,7 +6,21 @@
 
 @section('content')
 
-<form>
+@if($newResponse)
+<div class='alert alert-success'>
+    Your response {{ $newResponse }} was added.
+</div>
+@endif
+
+@if($app->errorsExist())
+<ul class='error alert alert-danger'>
+    @foreach($app->errors() as $error)
+    <li>{{ $error }}</li>
+    @endforeach
+</ul>
+@endif
+
+<form method='POST' action='/save-new-guess'>
     <h1>A Halloween Riddle!</h1>
 
     <p><i>What is a ghost's favorite dessert?</i></p>
@@ -26,12 +40,14 @@
         <li>Rhymes with the word dream</li>
     </ul>
 
-    <label for='response'>Your guess:</label><br>
-    <input type='text' name='response' id='response'><br>
+    <label for='response'>Your response:</label><br>
+    <input type='text' name='response' id='response' value="{{ $app->old('response') }}"><br>
     <label for='name'>Your name (include first name & last name):</label><br>
-    <input type='text' name='name' id='name'><br>
+    <input type='text' name='name' id='name' value="{{ $app->old('name') }}"><br>
 
-    <button type='submit'>Submit</button>
+    <button type='submit' class='btn btn-primary'>Submit</button>
 </form>
+<br>
+<a href='/guesses'>View all guesses</a>
 
 @endsection

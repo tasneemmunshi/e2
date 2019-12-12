@@ -1,11 +1,17 @@
 @extends('templates.master')
 
 @section('title')
-Individual Guess
+{{ $guess['name'] }}
 @endsection
 
 @section('content')
 
-<h2>Individual Guess</h2>
+<h2>{{ $guess['name'] }}</h2>
+
+<p>
+    {{ $guess['response'] }}
+</p>
+
+<a href='/guesses'>&larr; All guesses</a>
 
 @endsection
