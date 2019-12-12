@@ -8,4 +8,10 @@ All Guesses
 
 <h2>All Guesses</h2>
 
+</ul>
+@foreach($guesses as $guess)
+<li>{{ $guess['name'] }}</li>
+@endforeach
+</ul>
+
 @endsection

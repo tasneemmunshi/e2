@@ -28,6 +28,8 @@
 
     <label for='response'>Your guess:</label><br>
     <input type='text' name='response' id='response'><br>
+    <label for='name'>Your name (include first name & last name):</label><br>
+    <input type='text' name='name' id='name'><br>
 
     <button type='submit'>Submit</button>
 </form>

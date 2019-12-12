@@ -13,7 +13,9 @@ class AppController extends Controller
 
     public function guesses()
     {
-        return $this->app->view('guesses');
+        $guesses = $this->app->db()->all('guesses');
+
+        return $this->app->view('guesses', ['guesses' => $guesses]);
     }
 
     public function guess()
