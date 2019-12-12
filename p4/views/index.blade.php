@@ -47,6 +47,17 @@
 
     <button type='submit' class='btn btn-primary'>Submit</button>
 </form>
+
+@if($newResponse == 'ice scream')
+<div class='alert alert-success'>
+    That's correct!
+</div>
+@else
+<div class='error alert alert-danger'>
+    That's incorrect, please try again!
+</div>
+@endif
+
 <br>
 <a href='/guesses'>View all guesses</a>
 
